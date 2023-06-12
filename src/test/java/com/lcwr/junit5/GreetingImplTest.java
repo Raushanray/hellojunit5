@@ -1,15 +1,14 @@
 package com.lcwr.junit5;
 
-import static org.junit.Assert.*;
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class GreetingImplTest {
 	
 	private Greeting greeting;
-	@Before
+	@BeforeEach
 	public void Setup() {
 		System.out.println("Setup");
 		greeting = new GreetingImpl();
@@ -20,8 +19,8 @@ public class GreetingImplTest {
 	public void greetShouldReturnAValidOutput() {
 		System.out.println("greetShouldReturnAValidOutput");
 		String result = greeting.greet("Junit");
-		assertNotNull(result);
-		assertEquals("Hello Junit", result);
+		Assertions.assertNotNull(result);
+		Assertions.assertEquals("Hello Junit", result);
 	}
 	
 	@Test(expected  = IllegalArgumentException.class)
@@ -35,7 +34,7 @@ public class GreetingImplTest {
 		greeting.greet("");
 	}
 	
-	@After
+	@AfterEach
 	public void teardown() {
 		System.out.println("teardown");
 		greeting = null;
