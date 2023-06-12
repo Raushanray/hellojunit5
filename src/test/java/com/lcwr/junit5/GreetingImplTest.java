@@ -23,15 +23,20 @@ public class GreetingImplTest {
 		Assertions.assertEquals("Hello Junit", result);
 	}
 	
-	@Test(expected  = IllegalArgumentException.class)
+	@Test
 	public void greetShouldThrowAnException_For_NameIsNull() {
 		System.out.println("greetShouldThrowAnException_For_NameIsNull");
-		greeting.greet(null);
+		Assertions.assertThrows(IllegalArgumentException.class,()-> {
+			greeting.greet(null);
+		} );
+		
 	}
-	@Test(expected  = IllegalArgumentException.class)
+	@Test
 	public void greetShouldThrowAnException_For_NameIsBlank() {
 		System.out.println("greetShouldThrowAnException_For_NameIsBlank");
-		greeting.greet("");
+		Assertions.assertThrows(IllegalArgumentException.class,()-> {
+			greeting.greet(null);
+		} );
 	}
 	
 	@AfterEach
