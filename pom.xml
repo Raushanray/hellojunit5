@@ -23,8 +23,8 @@
 			<version>5.9.3</version>
 			<scope>test</scope>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-runner -->
+<!-- 
+		https://mvnrepository.com/artifact/org.junit.platform/junit-platform-runner
 		<dependency>
 			<groupId>org.junit.platform</groupId>
 			<artifactId>junit-platform-runner</artifactId>
@@ -40,6 +40,6 @@
 		</dependency>
 
 
-
+ -->
 	</dependencies>
 </project>
