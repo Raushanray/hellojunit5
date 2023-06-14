@@ -1,2 +1,4 @@
 com\lcwr\junit5\GreetingImpl.class
 com\lcwr\junit5\Greeting.class
+com\lcwr\junit5\GreetingService.class
+com\lcwr\junit5\GreetingServiceImpl.class

@@ -2,13 +2,13 @@ package com.lcwr.junit5;
 
 public class GreetingImpl implements Greeting{
 
+	private GreetingService service;
+	
+	@Override
 	public String greet(String name) {
-		
-		if (name == null || name.length() == 0) {
-			throw new IllegalArgumentException();
-		}
-		
-		return "Hello " + name;
+		return service.greet(name);
 	}
+
+	
 
 }
